@@ -32,12 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Principale));
             errorProvider1 = new ErrorProvider(components);
             pnl_Mappa = new Panel();
+            lbl_Copyright = new Label();
             pnl_AvvisiSopraMappa = new Panel();
             lbl_AvvisiDentroilPanel = new Label();
             lbl_TitoloMappa = new Label();
             lbl_InfoTitolo = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            lbl_PunteggioPuffo = new Label();
+            lbl_PunteggioPuffoTitolo = new Label();
             lbl_PunteggioGargamellaTitolo = new Label();
             btn_Left = new Button();
             btn_Down = new Button();
@@ -70,6 +71,18 @@
             pnl_Mappa.Name = "pnl_Mappa";
             pnl_Mappa.Size = new Size(500, 500);
             pnl_Mappa.TabIndex = 0;
+            // 
+            // lbl_Copyright
+            // 
+            lbl_Copyright.Anchor = AnchorStyles.None;
+            lbl_Copyright.AutoSize = true;
+            lbl_Copyright.Font = new Font("Ink Free", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Copyright.Location = new Point(347, 563);
+            lbl_Copyright.Name = "lbl_Copyright";
+            lbl_Copyright.Size = new Size(291, 18);
+            lbl_Copyright.TabIndex = 1;
+            lbl_Copyright.Text = "© 2025 Falcari Alessandro. All rights reserved.";
+            lbl_Copyright.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnl_AvvisiSopraMappa
             // 
@@ -119,7 +132,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
             tableLayoutPanel1.Controls.Add(lbl_InfoTitolo, 1, 0);
-            tableLayoutPanel1.Controls.Add(lbl_PunteggioPuffo, 0, 1);
+            tableLayoutPanel1.Controls.Add(lbl_PunteggioPuffoTitolo, 0, 1);
             tableLayoutPanel1.Controls.Add(lbl_PunteggioGargamellaTitolo, 0, 2);
             tableLayoutPanel1.Controls.Add(btn_Left, 0, 5);
             tableLayoutPanel1.Controls.Add(btn_Down, 1, 5);
@@ -148,16 +161,16 @@
             tableLayoutPanel1.Size = new Size(292, 500);
             tableLayoutPanel1.TabIndex = 2;
             // 
-            // lbl_PunteggioPuffo
+            // lbl_PunteggioPuffoTitolo
             // 
-            lbl_PunteggioPuffo.Anchor = AnchorStyles.None;
-            lbl_PunteggioPuffo.AutoSize = true;
-            lbl_PunteggioPuffo.Font = new Font("Ink Free", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_PunteggioPuffo.Location = new Point(25, 71);
-            lbl_PunteggioPuffo.Name = "lbl_PunteggioPuffo";
-            lbl_PunteggioPuffo.Size = new Size(47, 20);
-            lbl_PunteggioPuffo.TabIndex = 2;
-            lbl_PunteggioPuffo.Text = "Puffo";
+            lbl_PunteggioPuffoTitolo.Anchor = AnchorStyles.None;
+            lbl_PunteggioPuffoTitolo.AutoSize = true;
+            lbl_PunteggioPuffoTitolo.Font = new Font("Ink Free", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_PunteggioPuffoTitolo.Location = new Point(25, 71);
+            lbl_PunteggioPuffoTitolo.Name = "lbl_PunteggioPuffoTitolo";
+            lbl_PunteggioPuffoTitolo.Size = new Size(47, 20);
+            lbl_PunteggioPuffoTitolo.TabIndex = 2;
+            lbl_PunteggioPuffoTitolo.Text = "Puffo";
             // 
             // lbl_PunteggioGargamellaTitolo
             // 
@@ -328,7 +341,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 561);
+            ClientSize = new Size(984, 590);
+            Controls.Add(lbl_Copyright);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(lbl_TitoloMappa);
             Controls.Add(pnl_Mappa);
@@ -353,7 +367,7 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Button btn_Left;
         private Button btn_Up;
-        private Label lbl_PunteggioPuffo;
+        private Label lbl_PunteggioPuffoTitolo;
         private Button btn_Down;
         private ImageList imageList1;
         public Button btn_Right;
@@ -368,5 +382,6 @@
         private Label lbl_AvvisiDentroilPanel;
         private Label lbl_PunteggioPlayer;
         private Label lbl_PunteggioGargamella;
+        private Label lbl_Copyright;
     }
 }

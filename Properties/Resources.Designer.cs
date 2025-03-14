@@ -99,5 +99,15 @@ namespace I_Puffi.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Byte[].
+        /// </summary>
+        internal static byte[] puffo {
+            get {
+                object obj = ResourceManager.GetObject("puffo", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
